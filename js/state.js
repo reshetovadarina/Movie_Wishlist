@@ -27,19 +27,18 @@ export async function initMovies() {
     try {
         const localData = localStorage.getItem('movies');
 
-        if (localData && localData !== "[]" && localData !== null) {
+        if (localData !== null) {
             movies = JSON.parse(localData);
             return movies;
         }
 
-        console.log("Завантаження оригінальних фільмів з movies.js...");
+        console.log("Перший запуск: завантаження оригінальних фільмів з movies.js...");
         const data = await getMoviesSlow();
         movies = data || [];
 
     } catch (error) {
         console.error("Помилка ініціалізації або пошкоджений JSON в localStorage:", error);
         movies = defaultMovies || [];
-
     } finally {
         saveToLocalStorage();
         return movies;

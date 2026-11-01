@@ -141,7 +141,6 @@ async function searchMovieInOMDbAsync() {
         const card = document.createElement('div');
         card.className = 'omdb-inline-card';
 
-        // 🔥 ВИПРАВЛЕНО: if / else повністю закритий і симетричний
         if (data.Poster && data.Poster !== 'N/A') {
             const img = document.createElement('img');
             img.src = data.Poster;
@@ -154,24 +153,19 @@ async function searchMovieInOMDbAsync() {
             card.appendChild(noPosterDiv);
         }
 
-        // Створюємо окремий текстовий блок для опису фільму
         const infoDiv = document.createElement('div');
 
-        // НАЗВА ФІЛЬМУ
         const titleStrong = document.createElement('strong');
         titleStrong.textContent = data.Title;
 
-        // РІК ВИПУСКУ
         const yearSpan = document.createElement('span');
         yearSpan.textContent = 'Рік випуску: ' + data.Year;
 
-        // СТВОРЮЄМО КНОПКУ ДОДАВАННЯ
         const addBtn = document.createElement('button');
         addBtn.type = 'button';
         addBtn.id = 'omdb-add-wishlist-btn';
         addBtn.textContent = 'Додати у вішліст';
 
-        // Збираємо всю конструкцію докупи всередині DOM
         infoDiv.appendChild(titleStrong);
         infoDiv.appendChild(yearSpan);
         infoDiv.appendChild(addBtn);
