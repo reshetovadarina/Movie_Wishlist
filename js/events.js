@@ -1,5 +1,5 @@
 import { getMovies, setMovies, saveToLocalStorage, initMovies, addMovie } from './state.js';
-import { DEFAULT_FORM_YEAR } from './validation.js';
+import { DEFAULT_FORM_YEAR, isDuplicateMovie } from './validation.js';
 import { validateMovieForm } from './validation.js';
 import { renderMovie, showToast, updateCounters } from './render.js';
 import { generateId, debounce } from './helpers.js';
@@ -173,9 +173,15 @@ async function searchMovieInOMDbAsync() {
         card.appendChild(infoDiv);
         omdbCardResult.appendChild(card);
 
-        addBtn.addEventListener('click', () => {
+          addBtn.addEventListener('click', () => {
             const cleanYear = parseInt(data.Year) || DEFAULT_FORM_YEAR;
             const cleanGenre = data.Genre ? data.Genre.split(',')[0].trim() : "Фантастика";
+
+
+            if (isDuplicateMovie(getMovies(), data.Title, cleanYear)) {
+                alert(`Фільм "${data.Title}" (${cleanYear}) вже є у вашому списку!`);
+                return;
+            }
 
             const apiNewMovie = { id: generateId(), title: data.Title, year: cleanYear, genre: cleanGenre, watched: false };
             addMovie(apiNewMovie);
