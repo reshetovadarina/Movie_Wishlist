@@ -228,3 +228,21 @@ if (themeButton) {
         localStorage.setItem('theme', isDark ? 'dark' : 'light');
     });
 }
+const tabButtons = document.querySelectorAll('.tab-btn');
+const tabPanels = document.querySelectorAll('.tab-panel');
+
+tabButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const targetTab = button.getAttribute('data-tab');
+
+        tabButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+
+        tabPanels.forEach(panel => {
+            panel.classList.remove('active');
+            if (panel.id === targetTab) {
+                panel.classList.add('active');
+            }
+        });
+    });
+});
