@@ -2,7 +2,7 @@
 
 Сучасний модульний веб-додаток для створення персонального списку бажаних фільмів із можливістю інтеграції та пошуку у світовій базі кінематографа OMDb API.
 
-## 📱 Демонстрація (Скриншот)
+## 📱 Демонстрація
 
 https://github.com/reshetovadarina/movies_my_project/blob/main/Movie_Wishlist.png
 
@@ -23,8 +23,6 @@ https://github.com/reshetovadarina/movies_my_project/blob/main/Movie_Wishlist.pn
 - **Vanilla JavaScript** (Чистий JS без сторонніх бібліотек)
 - **ES6+ Modules** (Модульна архітектура проекту)
 - **OMDb API** (Світова база даних фільмів)
-
-## 📂 Структура проекту
 
 ## 📂 Структура проекту
 
