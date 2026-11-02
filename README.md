@@ -4,7 +4,7 @@
 
 ## 📱 Демонстрація
 
-https://github.com/reshetovadarina/movies_my_project/blob/main/Movie_Wishlist.png
+https://github.com/reshetovadarina/Movie_Wishlist/blob/main/movie_wishlist.gif
 
 ## ⚡ Можливості додатку
 
