@@ -46,6 +46,7 @@ https://github.com/reshetovadarina/Movie_Wishlist/blob/main/movie_wishlist.gif
 ## 🔗 Посилання на Live Demo
 
 Побачити проект у дії та протестувати його роботу наживо можна на GitHub Pages:
+https://reshetovadarina.github.io/Movie_Wishlist/
 
 ## 🔑 Примітка про API-ключ
 
