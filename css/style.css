@@ -174,7 +174,6 @@ select {
   background-color: #ffffff;
   color: #333333;
 }
-
 input:focus,
 select:focus {
   border-color: #aa2c71;
@@ -187,11 +186,6 @@ button:focus-visible,
   outline: 2px solid #aa2c71;
   outline-offset: 0;
   box-shadow: none;
-}
-
-.tab-btn:focus-visible {
-  outline: 2px solid #aa2c71;
-  outline-offset: -2px;
 }
 
 label {
